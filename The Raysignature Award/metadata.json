@@ -1,0 +1,6 @@
+{
+  "name": "Cinematic Awards Ceremony",
+  "description": "Premium cinematic award ceremony landing page with an interactive golden 3D trophy, smooth scroll-linked GSAP animations, and an AI acceptance speech generator.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

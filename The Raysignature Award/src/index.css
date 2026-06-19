@@ -1,0 +1,84 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, monospace;
+}
+
+/* Custom Teleprompter scrollbar styling */
+.custom-scrollbar::-webkit-scrollbar {
+  width: 6px;
+}
+
+@keyframes floatUp {
+  0% {
+    transform: translateY(80px) translateX(0) scale(0.6);
+    opacity: 0;
+  }
+  30% {
+    opacity: 0.8;
+  }
+  70% {
+    opacity: 0.8;
+  }
+  100% {
+    transform: translateY(-60vh) translateX(15px) scale(1.1);
+    opacity: 0;
+  }
+}
+
+.animate-float-up {
+  animation: floatUp 10s ease-in-out infinite;
+}
+
+.custom-scrollbar::-webkit-scrollbar-track {
+  background: rgba(0, 0, 0, 0.2);
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb {
+  background: rgba(220, 167, 56, 0.2);
+  border-radius: 3px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb:hover {
+  background: rgba(220, 167, 56, 0.5);
+}
+
+.glow-gold {
+  box-shadow: 0 0 20px rgba(220, 167, 56, 0.15);
+}
+
+.reverse-spin {
+  animation-direction: reverse;
+}
+
+/* 3. NOMINEE CARD HOVERS with dynamic transform and golden border glow */
+.nominee-card {
+  transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), border-color 0.4s ease, box-shadow 0.4s ease, opacity 0.4s ease, scale 0.4s ease !important;
+}
+
+.nominee-card:hover {
+  transform: translateY(-8px) !important;
+  border-color: rgba(251, 191, 36, 0.8) !important; /* Elegant golden border indicator */
+  box-shadow: 0 10px 30px rgba(251, 191, 36, 0.25) !important; /* Brighter glowing shadow */
+}
+
+/* MOBILE VIEWPORT OPTIMIZATIONS (max-width 768px) */
+@media (max-width: 768px) {
+  /* 1. MOBILE TYPOGRAPHY */
+  h1 {
+    font-size: 2.2rem !important;
+    line-height: 1.25 !important;
+  }
+  p {
+    font-size: 0.9rem !important;
+  }
+  
+  /* 2. MOBILE NOMINEE GRID */
+  .nominee-grid-container {
+    grid-template-columns: 1fr !important;
+  }
+}
+
+
